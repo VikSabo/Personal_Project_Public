@@ -1,0 +1,234 @@
+/*###################################
+  ######
+    
+    Hoja de estilos - Diseñado por Víctor Saborío H.
+    Introducción al desarrollo de aplicaciones Web.
+
+  ####################################################      
+*/		
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    height:100%;
+    background-image:url(http://www.isengard.com.br/wp-content/uploads/2013/12/fundo_slider_suporte_informatica.jpg);
+}
+
+#contenedor {
+ width: 1150px;
+ margin: 0 auto;
+ border: 1px solid #333;
+
+}
+
+#narrow {
+  float: left;
+  width: 400px;
+  background: transparent;
+}
+#wide {
+  float: left;
+  width: 834px;
+  background: transparent;
+}
+
+
+/*
+ ################################
+ #
+ #  Menu de la página
+ ################################
+*/
+
+body {
+  margin:0;
+}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {
+  float: left;
+}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover {background-color: #555;}
+
+ul.topnav li.icon {display: none;}
+
+.active {
+    background-color: #b14242;;
+}
+
+
+/*
+ ################################
+ #
+ #  Footer de la página
+ ################################
+*/
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #000000;
+  text-align: center;
+}
+
+/*Estilo fuente*/
+.personal {
+  color: white;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.serif {
+  color: yellow;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#fuente-reflexion{
+  color: black;
+  line-height: 25px;
+  font-size: 20px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+p.thought {
+  position:relative; /*see the support section below for more info*/
+  width:400px; /*size of the bubble*/
+  padding:20px 40px;
+  margin:10px 10px 80px 40px;
+  /**give the bubble's background a gradient**/
+  background:#f7a944; /*fallback colour for non-supporting browsers*/
+  background:-webkit-gradient(linear, 0 0, 0 100%, from(#fac868), to(#f3961c));
+  background:-moz-linear-gradient(#fac868, #f3961c);
+  background:-o-linear-gradient(#fac868, #f3961c);
+  background:linear-gradient(#fac868, #f3961c);
+  /**give the corners a large curve**/
+  -webkit-border-radius:180px;
+  -moz-border-radius:180px;
+  border-radius:180px;
+  /**add a drop shadow to the bubble**/
+  -webkit-box-shadow: -3px 4px 8px #989898;
+  -moz-box-shadow: -3px 4px 8px #989898;
+  box-shadow: -3px 4px 8px #989898;
+  /**style the text**/
+  color:#575544;
+  font-size:1em;
+  letter-spacing:.06em;
+}
+
+/******NOW CREATE THE THOUGHT CIRCLES*****/
+/****FIRST THE LARGE CIRCLE***/
+p.thought:before {
+  content:"";
+  position:absolute; /*see the support section below for more info*/
+  bottom:-40px; /*distance from the bottom of the bubble*/
+  left:20px; /*distance from the left edge of the bubble*/
+  background:#f3961c;
+  width:30px; /*same as the height*/
+  height:30px; /*same as the width*/
+  /*add a curve to the corners the same size as the height and width*/
+  -webkit-border-radius:30px;
+  -moz-border-radius:30px;
+  border-radius:30px;
+  /*add a drop shadow*/
+  -webkit-box-shadow: -3px 3px 4px #989898;
+  -moz-box-shadow: -3px 3px 4px #989898;
+  box-shadow: -3px 3px 8px #989898;
+}
+
+/*****NOW THE SMALL CIRCLE***/
+/**Created exactly the same way as the large circle, except with smaller width, height and border-radius**/
+p.thought:after {
+  content:"";
+  position:absolute;
+  bottom:-55px;
+  left:0;
+  width:15px;
+  height:15px;
+  background:#f3961c;
+  -webkit-border-radius:15px;
+  -moz-border-radius:15px;
+  border-radius:15px;
+  -webkit-box-shadow: -3px 3px 4px #989898;
+  -moz-box-shadow: -3px 3px 4px #989898;
+  box-shadow: -3px 3px 8px #989898;
+}
+
+/* Slide Show*/
+#slideshow {
+  margin: 80px auto;
+  position: relative;
+  width: 260px;
+  height: 260px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#slideshow > div {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+}
+
+/*
+ ################################
+ #
+ #  Responsive
+ ################################
+*/
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 479px){
+    #wide{ width: 90%; }
+    #narrow{ 
+      width: 90%;
+      margin-top: 30px;
+      float: left; 
+    }
+}
