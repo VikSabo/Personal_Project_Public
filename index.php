@@ -21,10 +21,10 @@
     <div id="wrapper" >
         
         <ul class="topnav" id="myTopnav">
-          <li><a class="active" href="#home">Home</a></li>
-          <li><a href="portafolio.html">Portafolio de Proyectos</a></li>
-          <li><a href="personal_information.html">Información Personal</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li><a class="active" href="index.php">Home</a></li>
+          <li><a href="portafolio.php">Portafolio de Proyectos</a></li>
+          <li><a href="personal_information.php">Información Personal</a></li>
+          <li><a href="contacto.php">Contacto</a></li>
           <li class="icon">
             <a href="javascript:void(0);" style="font-size:15px;" onclick="responsiveToggle()">☰</a>
           </li>
