@@ -10,6 +10,16 @@ setInterval(function() {
     .appendTo('#slideshow');
 },  3000);
 
+
+//Make the navigation bar static
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 50) {
+        $('.topnav').addClass('fix');
+    } else {
+        $('.topnav').removeClass('fix');
+    }
+});
+
 // Function to make the index page responsive
 function responsiveToggle() {
     var x = document.getElementById("myTopnav");
