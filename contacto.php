@@ -93,11 +93,5 @@
 				</form>
 			</div>
 		</div>
-		
-		
-
-		<br><br>
-		<a href="index.html">Regresar</a>
-
 	</body>	
 </html>

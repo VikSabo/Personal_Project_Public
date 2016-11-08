@@ -7,15 +7,6 @@
   ####################################################      
 */		
 
-* {
-    margin: 0;
-    padding: 0;
-}
-html,body {
-    height:100%;
-    background-image:url(http://3.bp.blogspot.com/-tqKhuvVHqa0/TnvazcpgaoI/AAAAAAAAljQ/yDOVnbMscak/s400/Texturas-Textures-10.png);
-}
-
 /*
  ################################
  #
@@ -29,36 +20,6 @@ html,body {
     left:0;
     right:0;
     margin:0;
-}
-
-ul.topnav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-ul.topnav li {float: left;}
-
-ul.topnav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-}
-
-ul.topnav li a:hover:not(.active) {background-color: #111;}
-
-ul.topnav li a.active {background-color: #4CAF50;}
-
-ul.topnav li.right {float: right;}
-
-@media screen and (max-width: 600px){
-    ul.topnav li.right,
-    ul.topnav li {float: none;}
 }
 
 /*
@@ -91,36 +52,34 @@ ul.topnav li.right {float: right;}
     padding:5px;
     background:#F0F0F0;
 }
-/*
-table  {
-    border-collapse:collapse;
-    border-spacing:10;
-    border-color:#000000;
+
+#fuente-1 {
+    margin-left: 70px;
+    margin-top: 33px;
+    font-size: 55px;
+    font-family: initial;
+    color: antiquewhite;
 }
-td{
-    text-align: center;
-    font-family:"Comic Sans MS", cursive, sans-serif !important;
-    font-size:17px;
-    padding:1px 5px;
-    border-style:solid;
-    border-width:1px;
-    overflow:hidden;
-    word-break:normal;
-    border-color:#000000;
-    color:#444;
-    background-color:#F7FDFA;
+
+#fuente-2 {
+    font-size: 45px;
+    font-family: initial;
+    color: gold;
+    margin-top: 40px;
 }
-th{
-    text-align: center;
-    font-family:"Comic Sans MS", cursive, sans-serif !important;
-    font-size:17px;
-    font-weight:normal;
-    padding:1px 5px;
-    border-style:solid;
-    border-width:1px;
-    overflow:hidden;
-    word-break:normal;
-    border-color:#000000;
-    color:#fff;
-    background-color:#26ADE4;
-}*/
+
+hr.style-eight { 
+    padding: 0; 
+    border: none; 
+    border-top: medium double #333; 
+    color: #333; text-align: center; 
+} 
+hr.style-eight:after { 
+    content: "§"; 
+    display: inline-block; 
+    position: relative; 
+    top: -0.7em; 
+    font-size: 1.5em; 
+    padding: 0 0.25em; 
+    background: white; 
+}
