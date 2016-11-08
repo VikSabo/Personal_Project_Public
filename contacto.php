@@ -58,7 +58,7 @@
         <ul class="topnav" id="myTopnav">
           <li><a href="index.php">Home</a></li>
           <li><a href="portafolio.php">Portafolio de Proyectos</a></li>
-          <li><a href="personal_information.php">Información Personal</a></li>
+          <li><a href="infopersonal.php">Información Personal</a></li>
           <li><a class="active" href="contacto.php" >Contacto</a></li>
           <li class="icon">
             <a href="javascript:void(0);" style="font-size:15px;" onclick="responsiveToggle()">☰</a>

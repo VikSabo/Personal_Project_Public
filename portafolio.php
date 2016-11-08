@@ -34,7 +34,7 @@
     <ul class="topnav">
       <li><a href="index.php">Home</a></li>
       <li><a class="active" href="portafolio.php">Portafolio de Proyectos</a></li>
-      <li><a href="personal_information.php">Información Personal</a></li>
+      <li><a href="infopersonal.php">Información Personal</a></li>
       <li><a href="contacto.php">Contacto</a></li>
     </ul>
 
