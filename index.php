@@ -19,7 +19,6 @@
  
 <body>
     <div id="wrapper" >
-        
         <ul class="topnav" id="myTopnav">
           <li><a class="active" href="index.php">Home</a></li>
           <li><a href="portafolio.php">Portafolio de Proyectos</a></li>
@@ -30,29 +29,23 @@
           </li>
         </ul>
  
-        <div id="parent">
-          <div id="wide">
-            <div class='define'>
-                <div class="personal" align="center">
-                  <h1>Víctor Saborío Hernández</h1>
-                </div>
-            </div>
-            <div id="slideshow">
-               <div>
-                 <img src="http://farm6.static.flickr.com/5224/5658667829_2bb7d42a9c_m.jpg">
-               </div>
-               <div>
-                 <img src="http://farm6.static.flickr.com/5230/5638093881_a791e4f819_m.jpg">
-               </div>
-            </div>
+        <div id="featured-content">
+          <div id="column1">
+            <font color="white"><h2>Proyecto Soda CASJ</h2></font>
+            <p><img src="images/proyecto1.png" width="300" height="150" alt="" /></p>
+            <p class="button"><a href="portafolio.php">Leer Más</a></p>
           </div>
-          <div id="narrow">
-            <p class="thought" id="fuente-reflexion">
-              "Por muy larga que sea la tormenta, el sol siempre vuelve a brillar
-              entre las nubes".
-            </p>
+          <div id="column2">
+            <font color="white"><h2>Proyecto PINTAE</h2></font>
+            <p><img src="images/proyecto2.png" width="300" height="150" alt="" />
+            <p class="button"><a href="portafolio.php">Leer Más</a></p>
           </div>
-        </div>       
+          <div id="column3">
+            <font color="white"><h2>Proyecto Consultoría</h2></font>
+            <p><img src="images/proyecto3.png" width="300" height="150" alt="" /></p>
+            <p class="button"><a href="portafolio.php">Leer Más</a></p>
+          </div>
+        </div>      
     </div>
  
     <footer>

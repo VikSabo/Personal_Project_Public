@@ -1,3 +1,8 @@
+<?php
+  include_once ('connection_db.php');
+  $connection = db_connect();
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -22,53 +27,67 @@
 	    </script>
 	</head>
 
-	<!--Begin Body-->
-	<body>
-		<div>
-            <ul class="topnav">
-              <li><a href="index.php">Home</a></li>
-              <li><a href="portafolio.php">Portafolio de Proyectos</a></li>
-              <li><a class="active" href="infopersonal.php">Información Personal</a></li>
-              <li><a href="contacto.php">Contacto</a></li>
-            </ul>
+<body>
+	<div>
+        <ul class="topnav">
+          <li><a href="index.php">Home</a></li>
+          <li><a href="portafolio.php">Portafolio de Proyectos</a></li>
+          <li><a class="active" href="infopersonal.php">Información Personal</a></li>
+          <li><a href="contacto.php">Contacto</a></li>
+        </ul>
+    </div>
+
+    <div class="header">
+      <img src="img_perfil/mii.jpg" alt="perfil" style="width:151px;height:128px;" class="circular_shadow">
+      <h1>Bienvenido</h1><br>
+    </div><br><br>
+
+    <div id="wide">
+    	<div id="alinear">
+    		<font color="white"><h1>Intereses personales</h1></font>
+	    	<ul class="ul">
+		    	<?php 
+		    		$sql = "SELECT `intereses_personales` FROM `preferencias`";
+		              $result = mysqli_query($connection, $sql);
+
+		              if (mysqli_num_rows($result) > 0) {
+		                  // output data of each row
+		                  while($row = mysqli_fetch_assoc($result)) {
+		                      echo '<li class="li">';
+		                    foreach($row as $key=>$value) {
+		                      echo $value;
+		                    }
+		                    echo '</li>';
+		                  }
+		              } else {
+		                  echo "0 results";
+		              }
+		    	?>
+		    </ul>
 	    </div>
+	    <div id="alinear">
+	    	<font color="white"><h1>Hobbies</h1></font>
+		    <ul class="ul">
+		    	<?php 
+		    		$sql = "SELECT `hobbies` FROM `preferencias`";
+		              $result = mysqli_query($connection, $sql);
 
-	    <br><br>
-    	<h1 id="fuente-1">Información Personal - Víctor Saborío H.</h1><br>
+		              if (mysqli_num_rows($result) > 0) {
+		                  // output data of each row
+		                  while($row = mysqli_fetch_assoc($result)) {
+		                      echo '<li class="li">';
+		                    foreach($row as $key=>$value) {
+		                      echo $value;
+		                    }
+		                    echo '</li>';
+		                  }
+		              } else {
+		                  echo "0 results";
+		              }
+		    	?>
+			</ul>
+		</div>	
+    </div>
 
-
-    	
-		<img src="images/mii.jpg" alt="perfil" style="width:304px;height:228px;" class="circular_shadow">
-		
-		<br><br>
-		<div class="secciones">
-			<p>Estudiante del Instituto Tecnológico de Costa Rica en la carrera en Ingeniería en Computación.A lo largo de mi vida como estudiante, de desarrollado distintas aplicaciones que incluyen, entre otras, páginas web, aplicaciones móviles.
-			</p>
-		</div>
-
-		<h2 align="center">Acerca de mí:</h2><br>
-
-		<div align="center">
-			<table class="tg">
-			  <tr>
-			    <th class="tg-kye2" >Pasa tiempos</th>
-			  </tr>
-			  <tr>
-			    <td class="tg-t04w">En las mañanas salgo a pedalear a las nubes de coronado.</td>
-			  </tr>
-			  <tr>
-			    <td class="tg-t04w">También me gusta prácticar a tocar la guitarra.</td>
-			  </tr>
-			  <tr>
-			    <td class="tg-t04w">Como hobbie, cuando estoy en la casa me gusta cocinar.</td>
-			  </tr>
-			  <tr>
-			    <td class="tg-t04w">En ocasiones, con mis amigos jugamos ajedrez.</td>
-			  </tr>
-			</table>
-		</div>
-	</body>
-
-	<!--End Body-->
-
+</body>
 </html>
